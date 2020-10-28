@@ -61,6 +61,7 @@ This project is inspired by
 * 柯伊伯带的咸鱼 "让井字棋变得不一样——战略井字棋！" <https://www.bilibili.com/read/cv187749/> 
 *  The Coding Train "Coding Challenge 154: Tic Tac Toe AI with Minimax Algorithm" <https://www.youtube.com/watch?v=trKjYdBASyQ&ab_channel=TheCodingTrain>
 *  <https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/>
+* <https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-4-alpha-beta-pruning/>
 
 ## Contact
 If you have any questions, feel free to contact us with the following emails:
