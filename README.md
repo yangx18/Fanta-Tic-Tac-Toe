@@ -1,5 +1,5 @@
 # Fanta Tic-Tac-Toe 
-An advanced, 9x3x3 version of traditional Tic-Tac-Toe 
+An advanced, 3x3x3x3 version of traditional Tic-Tac-Toe 
 
 ## Table of contents
 * [General info](#genneral_info)
