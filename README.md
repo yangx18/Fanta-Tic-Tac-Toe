@@ -18,8 +18,7 @@ In this game, the board will be displayed into 9 grids, and in each grids there 
 The following images show the player competes with the computer
 
 ![display1](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/display1.png)
-![display1](/Fanta-Tic-Tac-Toe/display1.png)
-![display2](/Users/leon/Desktop/ReadMe/display2.png)
+![display2](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/display2.png)
 
 ## Technologies
 Project is created with:
@@ -54,7 +53,7 @@ pip install numpy
 ## Features
 Main concept of this game is followed by minimax algorithm. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assumig that your opponent also plays optimally.
 
-![minimax](/Users/leon/Desktop/ReadMe/minimax.png)
+![minimax](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/minimax.png)
 
 ## Sources
 This project is inspired by 
