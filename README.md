@@ -1,6 +1,7 @@
 # Fanta Tic-Tac-Toe 
 An advanced, 3x3x3x3 version of traditional Tic-Tac-Toe 
 [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
+Download and run this .py file on your anaconda. Make sure install the [Sources](#sources)
 
 ## Table of contents
 * [General info](#genneral_info)
