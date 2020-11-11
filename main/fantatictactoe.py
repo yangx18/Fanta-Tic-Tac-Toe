@@ -298,15 +298,12 @@ if __name__ == "__main__":
           for large_row in range(3)])
 
     #Random obstacle
-
-    state[random.randint(0,1)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
-    state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
-    state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
-    state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
-    state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
+    obs_nums = input('Please input the number of obstacle you want between 0-4 in int number')
+    obs_nums = int(obs_nums)
+    for i in range(obs_nums):
+        state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
 
     #Ai is O , player is  X
-
     choice_ai = input('''plase choose the difficuty of the AI:\n
     1. tree-based one\n
     2."baseline" AI:\n
