@@ -31,7 +31,7 @@ Four modes of the game:
 
 The following image shows the sample of the game rule
 
-![](gamerulesample.png)
+![](rec/gamerulesample.png)
       
 ## Screenshots
 The following images show mode 3 and mode 4 test results 
@@ -42,7 +42,7 @@ The following images show mode 3 and mode 4 test results
 
 * Size: 3 obstacles
 * Mode: 4
-![](mode4.png)
+![](rec/mode4.png)
 
 ## Experimental Results
 In this experiment we change the number of obstacles to modify the size of the board. In each size, we simulate 100 games to the following results. 
@@ -50,19 +50,19 @@ In this experiment we change the number of obstacles to modify the size of the b
 * Mode: 4
 
 * Size: 0 obstacles
-![](0obstacles.png)
+![](rec/0obstacles.png)
 
 * Size: 1 obstacles
-![](1obstacles.png)
+![](rec/1obstacles.png)
 
 * Size: 2 obstacles
-![](2obstacles.png)
+![](rec/2obstacles.png)
 
 * Size: 3 obstacles
-![](3obstacles.png)
+![](rec/3obstacles.png)
 
 * Size: 4 obstacles
-![](4obstacles.png)
+![](rec/4obstacles.png)
 
 ## Technologies
 Project is created with:
@@ -107,7 +107,7 @@ Algorithm
 ## Features
 Main concept of this game is followed by minimax algorithm. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally.
 
-![](minimax.png)
+![](rec/minimax.png)
 
 ## Status
 Project is in progress, and there are still some problem but we will fix them in the later semester.(descriptions in () are possible solutions)
