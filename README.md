@@ -10,13 +10,13 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 ## Table of contents
 * [General info](#general_info)
-* [Step-by-step Running Example](#Step-by-step Running Example)
+* [Step-by-step Running Example](#Step by step Running Example)
 * [Screenshots](#screenshots)
-* [Experimental Results](#experimental_results)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
+* [Experimental Results](#experimental_results)
 * [Sources](#sources)
 * [Contact](#contact)
 * [License](#license)
@@ -34,7 +34,7 @@ The following image shows the sample of the game rule
 
 ![](rec/gamerulesample.png)
 
-## Step-by-step Running Example
+## Step by step Running Example
 * py [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 * Decide instance size(number of obstacle)
 ![](rec/0_obs.png) 
@@ -59,26 +59,6 @@ The following images show mode 3 and mode 4 test results
 * Size: 3 obstacles
 * Mode: 4
 ![](rec/mode4.png)
-
-## Experimental Results
-In this experiment we change the number of obstacles to modify the size of the board. In each size, we simulate 100 games to the following results. 
-
-* Mode: 4
-
-* Size: 0 obstacles
-![](rec/0obstacles.png)
-
-* Size: 1 obstacles
-![](rec/1obstacles.png)
-
-* Size: 2 obstacles
-![](rec/2obstacles.png)
-
-* Size: 3 obstacles
-![](rec/3obstacles.png)
-
-* Size: 4 obstacles
-![](rec/4obstacles.png)
 
 ## Technologies
 Project is created with:
@@ -131,6 +111,25 @@ Project is in progress, and there are still some problem but we will fix them in
 * AI is better than the last one but not performed well as we expected
 * Trying to strengthen the algorithm to increase the winning rate of the tree-based AI
 
+## Experimental Results
+In this experiment we change the number of obstacles to modify the size of the board. In each size, we simulate 100 games to the following results. 
+
+* Mode: 4
+
+* Size: 0 obstacles
+![](rec/0obstacles.png)
+
+* Size: 1 obstacles
+![](rec/1obstacles.png)
+
+* Size: 2 obstacles
+![](rec/2obstacles.png)
+
+* Size: 3 obstacles
+![](rec/3obstacles.png)
+
+* Size: 4 obstacles
+![](rec/4obstacles.png)
 
 ## Sources
 This project is inspired by 
