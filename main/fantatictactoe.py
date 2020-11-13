@@ -298,10 +298,13 @@ if __name__ == "__main__":
           for large_row in range(3)])
 
     #Random obstacle
-    obs_nums = input('Please input the number of obstacle you want between 0-4 in int number')
+    obs_nums = input('\nPlease input the number of obstacle you want between 0-4 in int number\n0-non obstacle, 1-one obstacle, 2-two obstacles, 3-three obstacles, 4-four obstacles:')
     obs_nums = int(obs_nums)
+
     for i in range(obs_nums):
         state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
+    print_func(state)
+
 
     #Ai is O , player is  X
     choice_ai = input('''plase choose the difficuty of the AI:\n
