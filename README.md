@@ -36,7 +36,7 @@ The following image shows the sample of the game rule
 
 ## Step-by-step Running Example
 
-* py [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
+- 1. py [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
 * Decide instance size(number of obstacle)
 ![](rec/0_obs.png) 
