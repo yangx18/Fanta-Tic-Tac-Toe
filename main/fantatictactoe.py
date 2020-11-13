@@ -448,7 +448,6 @@ if __name__ == "__main__":
             print_func(state)
             print('===================Now This is AI-1 Turn====================\n \n')
 
-
             a,b,c,d = c,d,best_action[0],best_action[1]
 
 
@@ -585,21 +584,32 @@ if __name__ == "__main__":
 
                 #If did not find that move, we random pick one gird
                 if cur_turn != "ai":
-                    print('3')
+                    for i in range(3):
+                        for j in range(3):
+                            if (state[i][j] =="_").any() and (state[i][j] =="O").any():
+                                nodes_num ,best_action= ai_1_turn(state[i][j])
+                                print("random pick2")
+                                if game_over(state[i][j])[0]:
+                                    state[i][j] ="O"
+                                cur_turn = "ai"
+                                break
+                        else: continue
+                        break
+                    if cur_turn != "ai":
+                        ramd_move = (random.randint(0,2),random.randint(0,2))
 
-                    ramd_move = (random.randint(0,2),random.randint(0,2))
+                        if (state[ramd_move[0]][ramd_move[1]] =="_").any():
+                            nodes_num ,best_action= ai_1_turn(state[ramd_move[0]][ramd_move[1]])
+                            print("random pick3")
+                            if game_over(state[ramd_move[0]][ramd_move[1]])[0]:
+                                state[ramd_move[0]][ramd_move[1]] ="O"
+                            cur_turn = "ai"
 
-                    if (state[ramd_move[0]][ramd_move[1]] =="_").any():
-                        nodes_num ,best_action= ai_1_turn(state[ramd_move[0]][ramd_move[1]])
-                        print("random pick")
-                        if game_over(state[ramd_move[0]][ramd_move[1]])[0]:
-                            state[ramd_move[0]][ramd_move[1]] =game_over(state[ramd_move[0]][ramd_move[1]])[1]
-                        cur_turn = "ai"
-                    else:
+                    if cur_turn != "ai":
                         for i in range(3):
                             for j in range(3):
                                 if (state[i][j] == "_").any():
-                                    nodes_num,best_action = ai_1_turn(state[i][j])
+                                    nodes_num = ai_turn(state[i][j])
                                     print("random pick")
                                     if game_over(state[i][j])[0]:
                                         state[i][j] =game_over(state[i][j])[1]
@@ -607,6 +617,7 @@ if __name__ == "__main__":
                                     break
                             else: continue
                             break
+
             print('the number of tree nodes that')
             print('the AI processed before selecting its action: \n', nodes_num)
             print('\n')
@@ -826,7 +837,6 @@ if __name__ == "__main__":
                 print('===================Below is Ai\'s move=====================\n')
                 print_func(state)
                 print('===================Now This is Your Turn====================\n \n')
-
 
 
     # Final Situation
