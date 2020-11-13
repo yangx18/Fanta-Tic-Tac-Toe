@@ -39,10 +39,17 @@ The following image shows the sample of the game rule
 * py [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
 * Decide instance size(number of obstacle)
-
-![](rec/0_obs.png) or  ![](rec/3_obs.png)
-
-
+![](rec/0_obs.png) 
+or
+![](rec/3_obs.png)
+* Choose different game mode:
+(Please read the rule first, and place your 'X' in corresponding grid.) 
+![](rec/step02.png)
+- 1.player with tree-based ai
+![](rec/step_choose01.png)
+- 2.player with baseline ai
+- 3.tree-based ai with tree-based ai
+- 4.tree-based ai vs tree-based ai
       
 ## Screenshots
 The following images show mode 3 and mode 4 test results 
