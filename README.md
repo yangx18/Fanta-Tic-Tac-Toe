@@ -10,6 +10,7 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 ## Table of contents
 * [General info](#general_info)
+* [Step-by-step Running Example](#Step-by-step Running Example)
 * [Screenshots](#screenshots)
 * [Experimental Results](#experimental_results)
 * [Technologies](#technologies)
@@ -32,6 +33,16 @@ Four modes of the game:
 The following image shows the sample of the game rule
 
 ![](rec/gamerulesample.png)
+
+## Step-by-step Running Example
+
+* py [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
+
+* Decide instance size(number of obstacle)
+
+![](rec/0_obs.png) or  ![](rec/3_obs.png)
+
+
       
 ## Screenshots
 The following images show mode 3 and mode 4 test results 
