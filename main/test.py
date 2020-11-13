@@ -296,8 +296,6 @@ if __name__ == "__main__":
     #Ai is O , player is  X
 
     choice_ai = input('''plase choose the difficuty of the AI:\n
-    1. tree-based one\n
-    2."baseline" AI:\n
     3.tree-based ai vs tree based ai:\n
     4.tree-based ai vs baseline ai:\n ''')
 
@@ -310,15 +308,8 @@ if __name__ == "__main__":
             2."baseline" AI:\n 3.tree-based ai vs tree based ai:\n4.tree-based ai vs baseline ai\n ')
 
 
-    if choice_ai == 1:
-        print('============================================')
-        print('tree-based choosed')
-        print('=============================================')
-    elif choice_ai == 2:
-        print('============================================')
-        print('baseline choosed')
-        print('=============================================')
-    elif choice_ai == 3:
+
+    if choice_ai == 3:
         print('============================================')
         print('tree-based ai vs tree based ai')
         print('=============================================')
@@ -329,7 +320,21 @@ if __name__ == "__main__":
     ai1,ai2 = 0,0
     base_ai,tree_ai =0,0
 
-    count = 100
+
+    #Random obstacle
+    obs_nums = input('\nPlease input the number of obstacle you want between 0-4 in int number\n0-non obstacle, 1-one obstacle, 2-two obstacles, 3-three obstacles, 4-four obstacles:\n')
+    obs_nums = int(obs_nums)
+    '''
+    random_out = []
+    random_inner = []
+
+    for i in range(obs_nums):
+        random_out.append((random.randint(0,2),random.randint(0,2)))
+        random_inner.append((random.randint(0,2),random.randint(0,2)))
+        '''
+
+    count = input("Please input the number of games, you want the AI to play:\n")
+    count = int(count)
     while (choice_ai == 3 and count > 0) or (choice_ai ==4 and count > 0 ):
         if choice_ai == 3:
 
@@ -359,12 +364,8 @@ if __name__ == "__main__":
                  for large_column in range(3)]
                   for large_row in range(3)])
 
-
-            #Random obstacle
-            state[random.randint(0,1)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
-            state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
-            state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
-            state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
+            for i in range(obs_nums):
+                state[random.randint(0,2)][random.randint(0,2)][random.randint(0,2)][random.randint(0,2)] = 'P'
 
             count -= 1
 
@@ -376,7 +377,7 @@ if __name__ == "__main__":
 
         #Keeping Gamming
         while (state =="_").any() and  not game_over_out(state):
-
+            #'tree-based ai vs tree based ai'
             if choice_ai == 3 :
                 #=========================ai 1(O)=====================================
                 print('======================AI-1(O)=====================')
@@ -551,7 +552,7 @@ if __name__ == "__main__":
 
 
         #==========================================option 4 baseline random AI vs tree based ai======================================================
-
+            #'tree-based ai vs baseline ai'
             elif choice_ai == 4:
 
                 #=========================ai 2(O)=====================================
@@ -677,176 +678,9 @@ if __name__ == "__main__":
                 a,b,c,d = c,d,ramd_move_sub[0],ramd_move_sub[1]
 
 
-            else:
-
-                state[1][1][1][1]='_'
-
-                #Human turn
-                a,b,c,d=-1,-1,-1,-1
-                while (a<0 or a>3) or (b<0 or b>3) or (c<0 or c>3) or (d<0 or d>3):
-                    print('Please Input correct Int number! bewtween 0-2!\n')
-
-                    print('====================================================')
-                    print('please followe the rule!!!!')
-                    print('====================================================\n')
-                    a = input("which row you select in our big tic(0 - 2 rows)?:\n:")
-                    b = input("which col you select in our big tic(0 - 2 cols)?:\n:")
-                    c = input("which row you select in small tic(0 - 2 rows)?:\n:")
-                    d = input("which col you select in small tic?(0 - 2 cols):\n:")
-                    print("\n")
-                    try:
-                        a,b,c,d = int(a),int(b),int(c),int(d)
-                    except:
-                        print('Please Input correct number!\n')
-                        a,b,c,d=-1,-1,-1,-1
-
-
-                if state[a][b][c][d] == "_":
-                    state[a][b][c][d] = "X"
-                    if game_over(state[a][b])[0]:
-                        state[a][b] ="X"
-                    cur_turn = "player"
-
-                    print('======================Your Move============================\n')
-                    print_func(state)
-                    print('\n')
-
-                else:
-                    print("ocupied, please retry")
-                    continue
-
-                if game_over_out(state):
-                    print('================Game Over====================')
-                    print('Your win!')
-                    print('=============================================\n')
-                    break
-
-            #==========================================TREE AI======================================================
-                if choice_ai == 1:
-                    print('======================1======================')
-
-                    unique, counts = np.unique(state[a][b],return_counts=True)
-                    xo_num = dict(zip(unique,counts))
-                    unique_sub, counts_sub = np.unique(state[c][d],return_counts=True)
-                    xo_num_sub = dict(zip(unique_sub,counts_sub))
-
-                    nodes_num = 0
-                    #AI TURN
-                    if (state[c][d] =="_").any() :
-
-                        if (('X' in xo_num and 'O' in xo_num and xo_num['X'] > xo_num['O']) or
-                         ('X' in xo_num and 'O' not in xo_num and xo_num['X']>1)):
-                            if '_' in xo_num_sub and xo_num_sub['_'] >1 and state[c][d][a][b] =='_':
-                                state[c][d][a][b] = 'P'
-                                nodes_num = ai_turn(state[c][d])
-                                state[c][d][a][b] ='_'
-                            else:
-                                nodes_num = ai_turn(state[c][d])
-                        else:
-                            nodes_num = ai_turn(state[c][d])
-
-                        if game_over(state[c][d])[0]:
-                            state[c][d] ="O"
-                        cur_turn = "ai"
-
-                    else:
-                        #Find a tic-tac-toe which can win by place only one more move
-                        for i in range(3):
-                            for j in range(3):
-                                if (state[i][j] == "_").any():
-                                    state_temp = state.copy()
-                                    nodes_num_temp = ai_turn(state_temp[i][j])
-                                    if game_over(state_temp[i][j])[0]:
-                                        nodes_num = ai_turn(state[i][j])
-                                        print("random pick")
-                                        state[i][j] ="O"
-                                        cur_turn = "ai"
-                                        break
-
-                            else: continue
-                            break
-
-                        #If did not find that move, we random pick one gird
-                        if cur_turn != "ai":
-                            print('3')
-
-                            ramd_move = (random.randint(0,2),random.randint(0,2))
-
-                            if (state[ramd_move[0]][ramd_move[1]] =="_").any():
-                                nodes_num = ai_turn(state[ramd_move[0]][ramd_move[1]])
-                                print("random pick")
-                                if game_over(state[ramd_move[0]][ramd_move[1]])[0]:
-                                    state[ramd_move[0]][ramd_move[1]] ="O"
-                                cur_turn = "ai"
-                            else:
-                                for i in range(3):
-                                    for j in range(3):
-                                        if (state[i][j] == "_").any():
-                                            nodes_num = ai_turn(state[i][j])
-                                            print("random pick")
-                                            if game_over(state[i][j])[0]:
-                                                state[i][j] ="O"
-                                            cur_turn = "ai"
-                                            break
-                                    else: continue
-                                    break
-                    print('the number of tree nodes that')
-                    print('the AI processed before selecting its action: \n', nodes_num)
-                    print('\n')
-                    if game_over_out(state):
-                        print('================Game Over====================')
-                        print('Your Lose!')
-                        print('=============================================\n')
-                        break
-
-
-                    #print( (state =="_").any())
-                    #print( game_over_out(state))
-                    print('===================Below is Ai\'s move=====================\n')
-                    print_func(state)
-                    print('===================Now This is Your Turn====================\n \n')
-
-            #==========================================random AI======================================================
-
-                elif(choice_ai == 2):
-                    print('======================2======================')
-
-                    if (state[c][d] =="_").any() :
-                        while True:
-                            ramd_move = (random.randint(0,2),random.randint(0,2))
-                            if (state[c][d][ramd_move[0]][ramd_move[1]] =="_"):
-                                state[c][d][ramd_move[0]][ramd_move[1]] = 'O'
-                                break
-
-                        if game_over(state[c][d])[0]:
-                            state[c][d] ="O"
-                        cur_turn = "ai"
-                    else:
-                        while True:
-                            ramd_move = (random.randint(0,2),random.randint(0,2))
-                            ramd_move_sub = (random.randint(0,2),random.randint(0,2))
-                            if (state[ramd_move[0]][ramd_move[1]][ramd_move_sub[0]][ramd_move_sub[1]] =="_"):
-                                state[ramd_move[0]][ramd_move[1]][ramd_move_sub[0]][ramd_move_sub[1]] = 'O'
-                                break
-
-                        if game_over(state[ramd_move[0]][ramd_move[1]])[0]:
-                            state[ramd_move[0]][ramd_move[1]] ="O"
-                        cur_turn = "ai"
-
-                    if game_over_out(state):
-                        print('================Game Over====================')
-                        print('Your Lose!')
-                        print('=============================================\n')
-                        break
-
-                    #print( (state =="_").any())
-                    #print( game_over_out(state))
-                    print('===================Below is Ai\'s move=====================\n')
-                    print_func(state)
-                    print('===================Now This is Your Turn====================\n \n')
     if choice_ai == 3:
-        print('ai1 wins :{0}\n ai2 wins:{1}'.format(ai1,ai2))
+        print('ai1 wins :{0} games\n ai2 wins:{1} games'.format(ai1,ai2))
     elif choice_ai ==4:
-        print('tree ai wins:{0}\n base ai wins:{1}'.format(tree_ai,base_ai))
+        print('tree ai wins:{0} games\n base ai wins:{1} games'.format(tree_ai,base_ai))
     # Final Situation
     print_func(state)
