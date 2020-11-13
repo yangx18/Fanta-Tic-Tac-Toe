@@ -7,8 +7,9 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 [test.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/test.py "Run numbers automatic games between tree-base ai and baseline ai")
 
+
 ## Table of contents
-* [General info](#genneral_info)
+* [General info](#general_info)
 * [Screenshots](#screenshots)
 * [Experimental Results](#experimental_results)
 * [Technologies](#technologies)
@@ -20,7 +21,7 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 * [License](#license)
 
 ## General Info
-In this game, each single grid in a 3x3 grid represents a 3x3 grid in the whole 9x9 board. For example, once the first player locates the mark on (0, 0)(1, 1), which is the middle grid of the top-left corner 3x3 grid. Then the next player has to follow the rules - locate the next mark on the middle 3x3 grid, and mark (1, 1)(0, 2). And the first player has to locate the mark in the top-right grid. And so on. And there are some obstacles named ***"P"*** which will be placed at the beginning(nobody can place at ***"P"***) .If one grid has a horizontal, vertical, or diagonal row then this grid has been completed. The player has to mark other grids. Once who has dominated 3 grids is the winner. Also, we implemented two AI in this game. One is baseline AI, which chooses actions uniformly at random. The other one is tree-based AI, which is implemented mininmax algorithm with alpha-beta pruning. 
+In this game, each single grid in a 3x3 grid represents a 3x3 grid in the whole 9x9 board. For example, once the first player locates the mark on (0, 0)(1, 1), which is the middle grid of the top-left corner 3x3 grid. Then the next player has to follow the rules - locate the next mark on the middle 3x3 grid, and mark (1, 1)(0, 2). And the first player has to locate the mark in the top-right grid. And so on. And there are some obstacles named ***"P"*** which will be placed at the beginning(nobody can place at ***"P"***) .If one grid has a horizontal, vertical, or diagonal row then this grid has been completed. The player has to mark other grids. Once who has dominated 3 grids is the winner. Also, we implemented two AI in this game. One is baseline AI, which chooses actions uniformly at random. The other one is tree-based AI, which is implemented minimax algorithm with alpha-beta pruning. 
 
 Four modes of the game:
 1. Player VS Tree-based AI
@@ -39,7 +40,7 @@ The following images show mode 3 and mode 4 test results
 * Mode: 3
 ![](mode3.png)
 
-* Size: 3 obstalces
+* Size: 3 obstacles
 * Mode: 4
 ![](mode4.png)
 
@@ -79,7 +80,7 @@ Libraries
 
 Algorithm
 
-* Mininmax Algorithm
+* Minimax Algorithm
 * Alpha-Beta Pruning
 
 ## Setup
@@ -104,15 +105,15 @@ Algorithm
    [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
 ## Features
-Main concept of this game is followed by minimax algorithm. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assumig that your opponent also plays optimally.
+Main concept of this game is followed by minimax algorithm. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally.
 
 ![](minimax.png)
 
 ## Status
-Project is in progress, and there are still some problem but we will fix them in the later semaster.(descriptions in () are possible solutions)
+Project is in progress, and there are still some problem but we will fix them in the later semester.(descriptions in () are possible solutions)
 
-* AI is not smart and efficient enough( do more research and hold sticks with human players)
-* Rules are not as smart as we assumed before in the proposal( make completely connections from sub-grid to whole board)
+* AI is better than the last one but not performed well as we expected
+* Trying to strengthen the algorithm to increase the winning rate of the tree-based AI
 
 
 ## Sources
