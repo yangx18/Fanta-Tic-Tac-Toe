@@ -10,7 +10,7 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 ## Table of contents
 * [General info](#general_info)
-* [Step-by-step Running Example](#Step by step Running Example)
+* [Step by step Running Example](#Step by step Running Example)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -101,9 +101,11 @@ Algorithm
    [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
 ## Features
-Main concept of this game is followed by minimax algorithm. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally.
-
+Main concept of this game is followed by ***minimax algorithm***. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally. And for improve the efficency of game algorithm, we uesed ***Alpha–beta pruning strategy***, which is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree.
 ![](rec/minimax.png)
+![](rec/minimax_alpha.png)
+![](rec/minimax_beta.png)
+
 
 ## Status
 Project is in progress, and there are still some problem but we will fix them in the later semester.(descriptions in () are possible solutions)
