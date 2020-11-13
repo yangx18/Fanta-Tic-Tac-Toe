@@ -3,6 +3,8 @@ An advanced, 3x3x3x3 version of traditional Tic-Tac-Toe.
 
 [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
+[test.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/test.py "Run numbers automatic games between tree-base ai and baseline ai")
+
 ## Table of contents
 * [General info](#genneral_info)
 * [Screenshots](#screenshots)
