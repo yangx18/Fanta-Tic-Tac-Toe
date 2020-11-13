@@ -608,7 +608,7 @@ if __name__ == "__main__":
                                     nodes_num ,best_action= ai_1_turn(state[i][j])
                                     print("random pick2")
                                     if game_over(state[i][j])[0]:
-                                        state[i][j] ="O"
+                                        state[i][j] =game_over(state[i][j])[1]
                                     cur_turn = "ai"
                                     break
                             else: continue
@@ -620,7 +620,7 @@ if __name__ == "__main__":
                                 nodes_num ,best_action= ai_1_turn(state[ramd_move[0]][ramd_move[1]])
                                 print("random pick3")
                                 if game_over(state[ramd_move[0]][ramd_move[1]])[0]:
-                                    state[ramd_move[0]][ramd_move[1]] ="O"
+                                    state[ramd_move[0]][ramd_move[1]] =game_over(state[ramd_move[0]][ramd_move[1]])[1]
                                 cur_turn = "ai"
 
                         if cur_turn != "ai":
