@@ -23,7 +23,7 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 * [Step by step Running Example](#Step_by_step_Running_Example)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
-* [Setup](#setup)
+* [Setup](##Step_by_step_Running_Example)
 * [Features](#features)
 * [Status](#status)
 * [Experimental Results](#experimental_results)
@@ -51,14 +51,11 @@ The following image shows the sample of the game rule
 ## Step by step Running Example
 * Anaconda python [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 * Decide instance size(number of obstacle)
-![](rec/0_obs.png) 
-or
-![](rec/3_obs.png)
+
 * Choose different game mode:
 (Please read the rule first, and place your 'X' in corresponding grid.) 
-![](rec/step02.png)
+
 - 1.player with tree-based ai
-![](rec/step_choose01.png)
 - 2.player with baseline ai
 - 3.tree-based ai with tree-based ai
 - 4.tree-based ai vs tree-based ai
