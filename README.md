@@ -52,7 +52,7 @@ The following image shows the sample of the game rule
 ## How to run
 
 ### NN-tree-base AI Version  
-I have offer many data set and trained models for you to avoid a long training time.
+⋅⋅⋅I have offer many data set and trained models for you to avoid a long training time.⋅⋅⋅
 
 **Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")**
 
