@@ -139,6 +139,7 @@ And for improving the efficiency of the game algorithm, we used ***Alpha-beta pr
 - Monte Carlo Tree Search
 
 ![](rec/mcts_pic.png)
+
 - Minimax Algorithm
 ![](rec/minimax.png)
 - Alpha–beta Pruning Strategy
