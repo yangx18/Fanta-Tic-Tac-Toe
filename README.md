@@ -20,7 +20,7 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 ## Table of contents
 * [General info](#general_info)
-* [Step by step Running Example](#Step_by_step_Running_Example)
+* [Step by step Running Example](#Step by step Running Example)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -83,9 +83,13 @@ Libraries
 * TensorFlow
 * Scipy
 * Pandas
+* Matplotlib
+* Torch
+* Itertools
 
 Algorithm
 
+* Monte Carlo Tree Search
 * Minimax Algorithm
 * Alpha-Beta Pruning
 
