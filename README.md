@@ -1,6 +1,6 @@
 # Fanta Tic-Tac-Toe 
 
-### Lastest Version(mcts tree search + neural network)
+### Lastest Version(mcts tree search + neural network AI)
 
 [tictactoe with mcts](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/mcts.py "Fanta Tic-Tac-Toe-mcts")
 
@@ -11,7 +11,7 @@
 [tictactoe data with Neural Network](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "data traning")
 
 
-### Old Version, An advanced, 3x3x3x3 version of traditional Tic-Tac-Toe.
+###  human, baseline AI, tree-based AI, 3x3x3x3 version of traditional Tic-Tac-Toe.
 
 [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
@@ -51,7 +51,7 @@ The following image shows the sample of the game rule
 
 ## Step by step Running Example
 
-### Laster Version For NN-tree-base AI
+### Lastest NN-tree-base AI Version  
 I have offer many data set and trained models for you to avoid a long training time.
 
 Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")
@@ -67,7 +67,7 @@ Anaconda python [tictactoe_net.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/
 Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")
 
 
-### Old Version For tree-base AI
+### human, baseline AI, tree-based AI Version
 Anaconda python [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
 Decide instance size(number of obstacles)
