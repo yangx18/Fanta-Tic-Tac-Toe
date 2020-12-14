@@ -22,7 +22,7 @@ Below test.py is for running numbers automatic games between tree-base ai and ba
 
 ## Table of contents
 * [General info](#general_info)
-* [Step by step Running Example](#step_by_step_Running_Example)
+* [How to run](#how_to_run)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
@@ -49,9 +49,9 @@ The following image shows the sample of the game rule
 
 ![](rec/gamerulesample.png)
 
-## Step by step Running Example
+## How to run
 
-### Lastest NN-tree-base AI Version  
+### NN-tree-base AI Version  
 I have offer many data set and trained models for you to avoid a long training time.
 
 **Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")**
