@@ -23,12 +23,12 @@ Below test.py is for running numbers automatic games between tree-base ai and ba
 ## Table of contents
 * [General info](#general_info)
 * [Step by step Running Example](#step_by_step_Running_Example)
-* [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
 * [Experimental Results](#experimental_results)
+* [Screenshots](#screenshots)
 * [Sources](#sources)
 * [Contact](#contact)
 * [License](#license)
@@ -81,17 +81,6 @@ Choose the different game mode:
 3. tree-based ai with tree-based ai
 4. tree-based ai vs tree-based ai
       
-## Screenshots
-The following images show mode 3 and mode 4 test results 
-
-* Size: 2 obstacles
-* Mode: 3
-![](rec/mode3.png)
-
-* Size: 3 obstacles
-* Mode: 4
-![](rec/mode4.png)
-
 ## Technologies
 Project is created with:
 
@@ -174,6 +163,18 @@ In this experiment, we change the number of obstacles to modify the size of the 
 
 * Size: 4 obstacles
 ![](rec/4obstacles.png)
+
+## Screenshots
+The following images show mode 3 and mode 4 test results 
+
+* Size: 2 obstacles
+* Mode: 3
+![](rec/mode3.png)
+
+* Size: 3 obstacles
+* Mode: 4
+![](rec/mode4.png)
+
 
 ## Sources
 This project is inspired by 
