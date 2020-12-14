@@ -20,7 +20,7 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 ## Table of contents
 * [General info](#general_info)
-* [Step by step Running Example](#Step by step Running Example)
+* [Step by step Running Example](#Step_by_step_Running_Example)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
 * [Setup](#setup)
@@ -33,6 +33,10 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 ## General Info
 In this game, each single grid in a 3x3 grid represents a 3x3 grid in the whole 9x9 board. For example, once the first player locates the mark on (0, 0)(1, 1), which is the middle grid of the top-left corner 3x3 grid. Then the next player has to follow the rules - locate the next mark on the middle 3x3 grid, and mark (1, 1)(0, 2). And the first player has to locate the mark in the top-right grid. And so on. And there are some obstacles named ***"P"*** which will be placed at the beginning(nobody can place at ***"P"***) .If one grid has a horizontal, vertical, or diagonal row then this grid has been completed. The player has to mark other grids. Once who has dominated 3 grids is the winner. Also, we implemented two AI in this game. One is baseline AI, which chooses actions uniformly at random. The other one is tree-based AI, which is implemented minimax algorithm with alpha-beta pruning. 
+
+New modes of the game:
+1. Player V.S NN_Tree_base AI
+2. NN_Tree_base AI V.S Tree_Base AI
 
 Four modes of the game:
 1. Player VS Tree-based AI
