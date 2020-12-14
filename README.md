@@ -52,9 +52,9 @@ The following image shows the sample of the game rule
 ## How to run
 
 ### NN-tree-base AI Version  
-⋅⋅⋅I have offer many data set and trained models for you to avoid a long training time.⋅⋅⋅
+I have offer many data set and trained models for you to avoid a long training time.
 
-**Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")**
+>**Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")**
 
 And then, First choose the board size(which here means the number of obstacles in this 9x9 game board).
 
@@ -64,18 +64,18 @@ Then choose the number of game you want to NN-tree-base AI V.S tree-base AI.
 
 Training your own data set.
 
-**Anaconda python [tictactoe_data.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/tictactoe_data.py "Fanta Tic-Tac-Toe")** to generate new data set.
+>**Anaconda python [tictactoe_data.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/tictactoe_data.py "Fanta Tic-Tac-Toe")** to generate new data set.
 
-**Anaconda python [tictactoe_net.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/tictactoe_net.py "Fanta Tic-Tac-Toe")** to train new data set with NN.
+>**Anaconda python [tictactoe_net.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/tictactoe_net.py "Fanta Tic-Tac-Toe")** to train new data set with NN.
 
-**Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")**
+>**Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")**
 
 And Same as above
 
 
 ### human, baseline AI, tree-based AI Version
 
-**Anaconda python [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")**
+>**Anaconda python [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")**
 
 Decide instance size(number of obstacles)
 
