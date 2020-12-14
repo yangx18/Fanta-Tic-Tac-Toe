@@ -8,6 +8,8 @@ Lastest Version(mcts tree search + neural network)
 
 [tictactoe data NN training](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/tictactoe_net.py "data traning")
 
+[tictactoe data with Neural Network](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "data traning")
+
 
 Old Version, An advanced, 3x3x3x3 version of traditional Tic-Tac-Toe.
 -------------------
