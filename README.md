@@ -26,7 +26,6 @@ Below test.py is for running numbers automatic games between tree-base ai and ba
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
-* [Status](#status)
 * [Experimental Results](#experimental_results)
 * [Screenshots](#screenshots)
 * [Sources](#sources)
@@ -136,13 +135,6 @@ And for improving the efficiency of the game algorithm, we used ***Alpha-beta pr
 - Alpha–beta Pruning Strategy
 ![](rec/minimax_alpha.png)
 ![](rec/minimax_beta.png)
-
-
-## Status
-The project is in progress, and there are still some problems but we will fix them in the later semester. (descriptions in () are possible solutions)
-
-* AI is better than the last one but not performed well as we expected
-* Trying to strengthen the algorithm to increase the winning rate of the tree-based AI
 
 ## Experimental Results
 In this experiment, we change the number of obstacles to modify the size of the board. In each size, we simulate 100 games to the following results. 
