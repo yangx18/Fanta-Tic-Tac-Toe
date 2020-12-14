@@ -1,5 +1,7 @@
 # Fanta Tic-Tac-Toe 
 An advanced, 3x3x3x3 version of traditional Tic-Tac-Toe.
+Lastest Version(mcts tree search + neural network)
+[tictactoe with mcts + nn](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/tictactoe_nn "Fanta Tic-Tac-Toe")
 
 [fantatictactoe.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/fantatictactoe.py "Fanta Tic-Tac-Toe")
 
