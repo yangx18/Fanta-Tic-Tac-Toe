@@ -20,10 +20,10 @@ Below test.py is  for running numbers automatic games between tree-base ai and b
 
 ## Table of contents
 * [General info](#general_info)
-* [Step by step Running Example](#Step_by_step_Running_Example)
+* [Step by step Running Example](#step_by_step_Running_Example)
 * [Screenshots](#screenshots)
 * [Technologies](#technologies)
-* [Setup](##Step_by_step_Running_Example)
+* [Setup](#setup)
 * [Features](#features)
 * [Status](#status)
 * [Experimental Results](#experimental_results)
@@ -55,7 +55,7 @@ The following image shows the sample of the game rule
 * Choose different game mode:
 (Please read the rule first, and place your 'X' in corresponding grid.) 
 
-- 1.player with tree-based ai
+-     1.player with tree-based ai
 - 2.player with baseline ai
 - 3.tree-based ai with tree-based ai
 - 4.tree-based ai vs tree-based ai
