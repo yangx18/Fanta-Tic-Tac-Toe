@@ -2,6 +2,7 @@
 Lastest Version(mcts tree search + neural network)
 
 [tictactoe with mcts](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/mcts.py "Fanta Tic-Tac-Toe")
+---------------------
 
 An advanced, 3x3x3x3 version of traditional Tic-Tac-Toe.
 
