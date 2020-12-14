@@ -8,7 +8,7 @@
 
 [tictactoe data NN training](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/tictactoe_net.py "data traning")
 
-[tictactoe data with Neural Network](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "data traning")
+[Play tictactoe with Neural Network Tree Base AI](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "NN") _(Read how to use)_
 
 
 ###  human, baseline AI, tree-based AI, 3x3x3x3 version of traditional Tic-Tac-Toe.
