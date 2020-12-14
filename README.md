@@ -135,6 +135,8 @@ Algorithm
 The main concept of this game is followed by ***minimax algorithm***. Minimax is a kind of backtracking algorithm that is used in decision making and game theory to find the optimal move for a player, assuming that your opponent also plays optimally.
 And for improving the efficiency of the game algorithm, we used ***Alpha-beta pruning strategy***, which is a search algorithm that seeks to decrease the number of nodes that are evaluated by the minimax algorithm in its search tree.
 
+For the Neural Network tree base AI, I use the Monte Carlo Tree Search(Mcts). The focus of MCTS is on the analysis of the most promising moves, expanding the search tree based on random sampling of the search space. The application of Monte Carlo tree search in games is based on many playouts, also called roll-outs. In each playout, the game is played out to the very end by selecting moves at random. The final game result of each playout is then used to weight the nodes in the game tree so that better nodes are more likely to be chosen in future playouts.[wikipedia]
+
 
 - Monte Carlo Tree Search
 
@@ -185,6 +187,7 @@ This project is inspired by
 *  Minimax Algorithm in Game Theory: Set 1 (Introduction). (2019, May 28). Retrieved October 28, 2020, from https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-1-introduction/
 *  Minimax Algorithm in Game Theory: Set 4 (Alpha-Beta Pruning). (2019, December 05). Retrieved October 28, 2020, from https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-4-alpha-beta-pruning/
 * 柯伊伯带的咸鱼. (2018, January 31). 让井字棋变得不一样--战略井字棋！. Retrieved October 28, 2020, from https://www.bilibili.com/read/cv187749/
+* Monte Carlo tree search Defination Retrieved Dec 14, 2020 from https://en.wikipedia.org/wiki/Monte_Carlo_tree_search
 * HW4_coding, Retrieved from CIS 667: Introduction to Artificial Intelligence (Fall 2020)(Professor Garrett Katz)
 
 ## Contact
