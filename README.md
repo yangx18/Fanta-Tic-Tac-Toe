@@ -21,8 +21,8 @@ Below test.py is for running numbers automatic games between tree-base ai and ba
 
 
 ## Table of contents
-* [General info](#general_info)
-* [How to run](#how_to_run)
+* [General info](#general-info)
+* [How to run](#how-to-run)
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Features](#features)
