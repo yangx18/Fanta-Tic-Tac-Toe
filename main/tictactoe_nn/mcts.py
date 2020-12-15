@@ -93,14 +93,13 @@ def mcts(state, num_rollouts, max_depth=100, choose_method=puct):
     node = Node(state, choose_method=choose_method)
     for rollout_counter in range(num_rollouts): rollout(node, max_depth=max_depth)
     for child, state in node.children():
-        print(child.score_estimate)
-        print(state)
-
+        #print(child.score_estimate)
+        #print(state)
+        pass
     a = np.argmax([
         child.score_estimate
         for child, _ in node.children()
         ])
-
     return node, a
 
 

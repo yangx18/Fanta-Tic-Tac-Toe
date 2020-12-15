@@ -6,12 +6,20 @@ import pysnooper
 
 def TictactoeNet(board_size):
     x = 3*board_size*board_size
+    layers=27
     y = 1
-    in_features,out_features = x,y
+    in_features,hidden_features,out_features = x,layers,y
+    '''
+    model_layer = Sequential(
+            Flatten(),
+            Linear(in_features,hidden_features)
+          )
+          '''
     model = Sequential(
             Flatten(),
             Linear(in_features,out_features)
           )
+
     return model
 
 def calculate_loss(net, x, y_targ):
@@ -54,7 +62,7 @@ if __name__ == "__main__":
         train_loss.append(e_train.item() / (len(shuffle)-split))
         test_loss.append(e_test.item() / split)
 
-    tr.save(net.state_dict(), "model%d.pth" % instance_size)
+    tr.save(net.state_dict(), "new_model%d.pth" % instance_size)
 
     import matplotlib.pyplot as pt
     pt.plot(train_loss,'b-')

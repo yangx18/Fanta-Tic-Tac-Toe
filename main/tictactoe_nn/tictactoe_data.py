@@ -73,6 +73,7 @@ def get_batch( num_games=50, num_rollouts=50, choose_method =None):
 
 if __name__ == "__main__":
     board_size = 9
+    instance_size = int(input('instance size/the number of obstacles(0-4) 5 different size:\n'))
     num_games = 50
     num_rollouts = 50
     inputs, outputs = get_batch(num_games=num_games,num_rollouts=num_rollouts,choose_method=mcts.puct)
@@ -80,4 +81,4 @@ if __name__ == "__main__":
     print(outputs[-1])
 
     import pickle as pk
-    with open("1data%d.pkl" % board_size, "wb") as f: pk.dump((inputs, outputs), f)
+    with open("data%d.pkl" % instance_size, "wb") as f: pk.dump((inputs, outputs), f)
