@@ -56,6 +56,8 @@ I have offer many data set and trained models for you to avoid a long training t
 
 >**Anaconda python [play_tictactoe_nn.py](https://github.com/yangx18/Fanta-Tic-Tac-Toe/blob/main/main/tictactoe_nn/play_tictactoe_nn.py "Fanta Tic-Tac-Toe")**
 
+(_Do Not Miss the .plk and .pth file_)
+
 And then, First choose the board size(which here means the number of obstacles in this 9x9 game board).
 
 Then choose the number of game you want to NN-tree-base AI V.S tree-base AI.
