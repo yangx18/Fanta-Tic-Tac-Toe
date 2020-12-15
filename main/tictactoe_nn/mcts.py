@@ -24,13 +24,13 @@ def puct_probs(node):
     qc = node.get_score_estimates()
     #UCT
     uc = np.sqrt( (np.log(node.visit_count + 1)) / (nc + 1) ) + qc
+    #softmax
+    uc_e = np.exp(uc)
+    uc_n = uc_e/(uc_e.sum())
     '''
     #Tanh
     uc_n = (np.exp(2*uc)+1)/(np.exp(2*uc)+1)
     '''
-    #softmax
-    uc_e = np.exp(uc)
-    uc_n = uc_e/(uc_e.sum())
 
     return uc_n
 
@@ -89,7 +89,7 @@ def rollout(node, max_depth=None):
     return result
 
 #@pysnooper.snoop(watch=('a'),depth=2)
-def mcts(state, num_rollouts, max_depth=100, choose_method=puct):
+def mcts(state, num_rollouts, max_depth=50, choose_method=puct):
     node = Node(state, choose_method=choose_method)
     for rollout_counter in range(num_rollouts): rollout(node, max_depth=max_depth)
     for child, state in node.children():
@@ -114,7 +114,7 @@ def input_fun(last_action,state):
         if input("\nReally quit? (y/n)> ").lower().startswith('y'):
             sys.exit(1)
         print("Please write correct rows'/cols : \n")
-        a,b,c,d = input_fun(last_action,states)
+        a,b,c,d = input_fun(last_action,state)
 
     '''
     for i in state.valid_actions():

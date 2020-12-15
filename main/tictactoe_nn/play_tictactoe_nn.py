@@ -31,10 +31,8 @@ if __name__ == "__main__":
     net = tn.TictactoeNet(board_size)
     net.load_state_dict(tr.load("model%d.pth" % b_size))
 
-    #Reapet games_times times number of games
-    for game_time in range(game_times):
-        print(game_time)
-        score_ai,score_player = 0,0
+    mode = int(input('Please input\n1 for NN-Mcts-AI v.s Mcts AI:\n2 for NN-Mcts-AI v.s human player:\n'))
+    if mode == 2:
         state = tt.initial_state(b_size)
         for step in it.count():
             print(state.print_func())
@@ -52,79 +50,110 @@ if __name__ == "__main__":
             # Otherwise, if it is the NN AI's turn (max), run NN_MCTS to decide its action
             if  state.is_max_players_turn():
                 node, a = mcts.mcts(state,
-                    num_rollouts=50, max_depth=25, choose_method=nn_puct)
+                    num_rollouts=100, max_depth=50, choose_method=nn_puct)
                 state = node.children()[a][0].state
                 continue
 
-            #MCTS AI
-            if  not state.is_max_players_turn():
-                node, a = mcts.mcts(state,max_depth=25,
-                    num_rollouts=50, choose_method=mcts.puct)
-                state = node.children()[a][0].state
-                continue
 
-            '''
             # Otherwise, get next move from user
             while True: # repeat until user chooses a valid action
 
-                action = mcts.input_fun(node.children()[a][1])
+                action = mcts.input_fun(node.children()[a][1],node.children()[a][0])
                 row_out,col_out,row_in,col_in = action[0],action[1],action[2],action[3]
 
-                vaild_actions = state.valid_actions()
-                if (row_out,col_out,row_in,col_in) not in vaild_actions:
+                if (row_out,col_out,row_in,col_in) not in valid_actions:
+                    print(valid_actions)
                     print('please reinput correct row and col\n')
                     continue
-
                 # action was valid, exit the busy loop
                 break
-             '''
             # perform selected action
             state = state.perform_extra(action)
-
         print("Game over!\n================================")
-        #caculate score
-        for i in range(3):
-            for j in range(3):
-                state_temp = initial_mini_state(state.board[i,j])
-                if state_temp.score_for_max_player()>0: score_ai += 1
-                elif state_temp.score_for_max_player()<0: score_player +=1
+        if state.score_for_max_max_player()>0: print("NN_AI wins")
+        elif state.score_for_max_max_player()==0: print('tie')
+        else: print("player wins")
 
-        score_ai_total = score_ai-score_player
-        score_player_total = score_player-score_ai
-        #caculate the wining times
-        if state.score_for_max_max_player()>0:
-            print("NN_AI wins")
-            count_ai += 1
-            #if nn-ai wins but loss the score, we say it wins 0 score
-            if score_ai_total<0:
-                score_ai_total = 0
-        elif state.score_for_max_max_player()==0:
-            print('tie')
-        else:
-            print("player wins")
-            count_player += 1
-            #if player wins but loss the score, we say it wins 0 score
-            if score_player_total < 0:
-                score_player_total = 0
+    elif mode ==1 :
+        #Reapet games_times times number of games
+        for game_time in range(game_times):
+            print(game_time)
+            score_ai,score_player = 0,0
+            state = tt.initial_state(b_size)
+            for step in it.count():
+                print(state.print_func())
+                print("Step %d" % step)
+
+                # Stop when game is over
+                if state.is_leaf_leaf(): break
+
+                # Act immediately if only one action available
+                valid_actions = state.valid_actions()
+                if len(valid_actions) == 1:
+                    state = state.perform_extra(valid_actions[0])
+                    continue
+
+                # Otherwise, if it is the NN AI's turn (max), run NN_MCTS to decide its action
+                if  state.is_max_players_turn():
+                    node, a = mcts.mcts(state,
+                        num_rollouts=50, max_depth=50, choose_method=nn_puct)
+                    state = node.children()[a][0].state
+                    continue
+
+                #MCTS AI
+                if  not state.is_max_players_turn():
+                    node, a = mcts.mcts(state,max_depth=50,
+                        num_rollouts=50, choose_method=mcts.puct)
+                    state = node.children()[a][0].state
+                    continue
+
+                # perform selected action
+                state = state.perform_extra(action)
+
+            print("Game over!\n================================")
+            #caculate score
+            for i in range(3):
+                for j in range(3):
+                    state_temp = initial_mini_state(state.board[i,j])
+                    if state_temp.score_for_max_player()>0: score_ai += 1
+                    elif state_temp.score_for_max_player()<0: score_player +=1
+
+            score_ai_total = score_ai-score_player
+            score_player_total = score_player-score_ai
+            #caculate the wining times
+            if state.score_for_max_max_player()>0:
+                print("NN_AI wins")
+                count_ai += 1
+                #if nn-ai wins but loss the score, we say it wins 0 score
+                if score_ai_total<0:
+                    score_ai_total = 0
+            elif state.score_for_max_max_player()==0:
+                print('tie')
+            else:
+                print("player wins")
+                count_player += 1
+                #if player wins but loss the score, we say it wins 0 score
+                if score_player_total < 0:
+                    score_player_total = 0
 
 
-        score_ais.append(score_ai_total)
-        score_players.append(score_player_total)
+            score_ais.append(score_ai_total)
+            score_players.append(score_player_total)
 
-    print('Instance size '+str(b_size))
-    print('Win games for ai-nn: {0} times\nWin games for mcts-ai: {1} times'.format(count_ai,count_player))
-    print('total score of AI-nn',sum(score_ais))
-    print("total score of AI-mctstree",sum(score_players))
+        print('Instance size '+str(b_size))
+        print('Win games for ai-nn: {0} times\nWin games for mcts-ai: {1} times'.format(count_ai,count_player))
+        print('total score of AI-nn',sum(score_ais))
+        print("total score of AI-mctstree",sum(score_players))
 
-    print('score for ai with NN in each play: {0}\nscore for mcts-ai in each play: {1}'.format(score_ais,score_players))
+        print('score for ai with NN in each play: {0}\nscore for mcts-ai in each play: {1}'.format(score_ais,score_players))
 
-    #Plot Histogram
-    x = score_ais
-    hist, bins = np.histogram(x, bins=[i for i in range(-5,6)])
-    plt.hist(x, bins, histtype='bar', edgecolor="black", align='mid',rwidth=0.9)
-    plt.xlabel('Score of NN_MCTS_AI')
-    plt.ylabel('Count')
+        #Plot Histogram
+        x = score_ais
+        hist, bins = np.histogram(x, bins=[i for i in range(-5,6)])
+        plt.hist(x, bins, histtype='bar', edgecolor="black", align='mid',rwidth=0.9)
+        plt.xlabel('Score of NN_MCTS_AI')
+        plt.ylabel('Count')
 
-    title = 'NN_Mcts_AI---Instance Size '+str(b_size)
-    plt.title(title)
-    plt.show()
+        title = 'NN_Mcts_AI---Instance Size '+str(b_size)
+        plt.title(title)
+        plt.show()
