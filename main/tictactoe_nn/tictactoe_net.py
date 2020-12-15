@@ -6,18 +6,23 @@ import pysnooper
 
 def TictactoeNet(board_size):
     x = 3*board_size*board_size
-    layers=27
+    layers_fir=243
+    layers_sec=243
     y = 1
-    in_features,hidden_features,out_features = x,layers,y
-    '''
-    model_layer = Sequential(
+    in_features,hidden_features_fir,hidden_features_sec,out_features = x,layers_fir,layers_sec,y
+
+    model_layer_fir = Sequential(
             Flatten(),
-            Linear(in_features,hidden_features)
+            Linear(in_features,hidden_features_fir)
           )
-          '''
+    model_layer_sec = Sequential(
+             Flatten(),
+             Linear(hidden_features_fir,hidden_features_sec)
+           )
+
     model = Sequential(
             Flatten(),
-            Linear(in_features,out_features)
+            Linear(hidden_features_sec,out_features)
           )
 
     return model
