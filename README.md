@@ -197,13 +197,10 @@ If you have any questions, feel free to contact us with the following emails:
 
 * <yxiao09@syr.edu>
 
-* <yzhou01@syr.edu>
-* <leonlovesparis@gmail.com>
-
 ## License:
 MIT License
 
-Copyright (c) [2020] [Xiao Yang, Zhou Yixin, Li Ang]
+Copyright (c) [2020] [Xiao Yang]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
